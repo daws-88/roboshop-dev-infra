@@ -8,12 +8,12 @@ variable "environment" {
 
 variable "sg_names" {
   default = [ # database
-    "mongodb", "redis","mysql","rabbitmq",
+    "mongodb", "redis", "mysql", "rabbitmq",
     # bavkend
-    "catalogue","user","cart","shipping","payment",
+    "catalogue", "user", "cart", "shipping", "payment",
     # frontend
-      "frontend",
-      # bastion
-      "bastion",
+    "frontend",
+    # bastion
+    "bastion",
   ]
 }
