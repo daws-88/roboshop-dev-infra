@@ -26,7 +26,6 @@ pipeline {
                 }
             }
         }
-
         stage('plan') {
             steps {
                 withAWS(credentials: 'aws-creds', region: 'us-east-1') {
@@ -37,7 +36,6 @@ pipeline {
                 }
             }
         }
-
         stage('Deploy') {
             input {
                 message 'Should we continue?'
@@ -51,7 +49,6 @@ pipeline {
                     )
                 }
             }
-
             steps {
                 withAWS(credentials: 'aws-creds', region: 'us-east-1') {
                     sh '''
@@ -68,15 +65,12 @@ pipeline {
             echo 'I will always say Hello'
             cleanWs()
         }
-
         success {
             echo 'Run if pipeline success'
         }
-
         failure {
             echo 'Run if pipeline failure'
         }
-
         aborted {
             echo 'pipeline is aborted'
         }
