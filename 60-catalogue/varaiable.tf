@@ -7,6 +7,6 @@ variable "environment" {
 }
 
 variable "domain_name" {
-    default = "daws88s.fun"
+  default = "daws88s.fun"
 }
 

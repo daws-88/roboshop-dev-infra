@@ -6,11 +6,11 @@ terraform {
     }
   }
   backend "s3" {
-    bucket = "remote-state-88-dev"
-    key = "roboshop-dev-backend-alb"
+    bucket       = "remote-state-88-dev"
+    key          = "roboshop-dev-backend-alb"
     use_lockfile = true
-    encrypt = true
-    region = "us-east-1"
+    encrypt      = true
+    region       = "us-east-1"
   }
 }
 

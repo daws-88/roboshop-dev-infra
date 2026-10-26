@@ -3,7 +3,7 @@ output "vpc_id" {
 }
 
 output "az_names" {
-    value = module.vpc.az_names
+  value = module.vpc.az_names
 }
 
 output "public_sunnet_ids" {
