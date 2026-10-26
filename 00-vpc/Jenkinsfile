@@ -1,3 +1,4 @@
+
 pipeline {
     agent {
         node {
@@ -61,13 +62,14 @@ pipeline {
                 }
             }
         }
-    }
-    stage('Trigger sg') {
-        steps {
-            script {
-                build job: '10-sg',
-                    wait: false,       // Do not wait for completion
-                    propagate: false  // Do not propagate downstream failure
+
+        stage('Trigger sg') {
+            steps {
+                script {
+                    build job: '10-sg',
+                        wait: false,
+                        propagate: false
+                }
             }
         }
     }
