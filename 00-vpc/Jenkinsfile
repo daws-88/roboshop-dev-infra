@@ -63,13 +63,13 @@ pipeline {
         }
     }
     stage('Trigger sg') {
-        steps {
-            script {
-                build job: '10-sg',
-                    wait: false, // Wait for completion
-                    propagate: false // Propagate status
-            }
+    steps {
+        script {
+            build job: '10-sg',
+                wait: false,       // Do not wait for completion
+                propagate: false  // Do not propagate downstream failure
         }
+    }
 }
 
     post {
